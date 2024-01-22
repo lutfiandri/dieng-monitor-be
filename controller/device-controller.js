@@ -9,10 +9,12 @@ const upsertData = async (req, res) => {
       temperature: req.body.temperature,
     };
 
+    const deviceId = req.params.id;
+
     await db
       .collection('devices')
       .doc(deviceId)
-      .set({
+      .update({
         data: FieldValue.arrayUnion(newDeviceData),
       });
 
