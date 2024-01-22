@@ -1,0 +1,9 @@
+@baseurl = http://localhost:5000
+
+POST {{baseurl}}/devices/123/data
+Content-Type: application/json
+
+{
+  "co2": 400,
+  "temperature": 25
+}
