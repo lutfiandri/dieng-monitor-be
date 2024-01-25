@@ -1,12 +1,12 @@
-@baseurl = http://localhost:5000
-# @baseurl = https://dieng-monitor-be.vercel.app
+# @baseurl = http://localhost:5000
+@baseurl = https://dieng-monitor-be.vercel.app
 
 POST {{baseurl}}/devices/123/data
 Content-Type: application/json
 
 {
-  "co2": 400,
-  "temperature": 25
+  "co2": 300,
+  "temperature": 20
 }
 
 ### export excel

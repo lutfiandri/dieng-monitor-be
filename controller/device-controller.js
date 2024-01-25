@@ -7,8 +7,9 @@ const upsertData = async (req, res) => {
   try {
     const newDeviceData = {
       timestamp: new Date(),
-      co2: req.body.co2,
-      temperature: req.body.temperature,
+      co2: req.body.co2 || Number(req?.query?.co2 || '0'),
+      temperature:
+        req.body.temperature || Number(req?.query?.temperature || '0'),
     };
 
     const deviceId = req.params.id;
